@@ -128,7 +128,7 @@ if __name__ == "__main__":
     print('training...')
     e = emissionEstimateSmoothing(sys.argv[1])
     print('training done. starting test...')
-    sentimentAnalysis(sys.argv[2], e, 'output/dev.p2.out')
+    sentimentAnalysis(sys.argv[2], e, sys.argv[3])
     print('test done.')
 
 
