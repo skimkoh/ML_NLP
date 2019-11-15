@@ -118,12 +118,6 @@ def sentimentAnalysis(inputfile, e, outputfile):
             else:
                 f.write(f"\n")
 
-# e = emissionEstimateSmoothing('/Users/kohseukim/Downloads/EN/train', 3)
-    
-# print(sentimentAnalysis('/Users/kohseukim/Downloads/EN/dev.in', e, '/Users/kohseukim/Downloads/EN/test'))
-# print("done")
-
-
 if __name__ == "__main__":
     print('training...')
     e = emissionEstimateSmoothing(sys.argv[1])
