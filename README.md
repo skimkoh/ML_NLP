@@ -8,11 +8,11 @@ Calculate the output for the datasets.
 
 To run: 
 
-    python source/part2/part2.py datasets/[dataset]/[training file] datasets/[dataset]/[testing file] output/[output file]
+    python source/part2/part2.py [dataset]/[training file] [dataset]/[testing file] [dataset]/[output file]
 
 or as an example: 
 
-    python source/part2/part2.py datasets/EN/train datasets/EN/dev.in output/dev.p2.out
+    python source/part2/part2.py EN/train EN/dev.in EN/dev.p2.out
 
 The output will be in the output folder. Compare the answers with the evaluation script.
     
@@ -22,8 +22,8 @@ The output will be in the output folder. Compare the answers with the evaluation
 
 To evaluate, run:
 
-    python evalResult.py datasets/[dataset]/dev.out output/[output file]
+    python evalResult.py [dataset]/dev.out [dataset]/[output file]
     
 or
 
-    python evalResult.py datasets/EN/dev.out output/dev.p2.out
+    python evalResult.py EN/dev.out EN/dev.p2.out
