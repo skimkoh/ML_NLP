@@ -129,4 +129,3 @@ if __name__ == "__main__":
     sentimentAnalysis(sys.argv[2], e, sys.argv[3])
     print('test done.')
 
-
