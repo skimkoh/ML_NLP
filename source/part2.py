@@ -6,6 +6,8 @@ x_lst = []    # showing all the words in the document
 x_lst_distinct = []     # remove duplicates words. Is used to extract words that appear > 3
 x_cleaned = []   # store all the words in the training set that is not 'UNK'. Is used to compare with testing set
 
+
+# part 2 (i)
 def emissionEstimate(filename):
 
     for line in open(filename, 'r'):
@@ -32,6 +34,8 @@ def emissionEstimate(filename):
                 continue
     return e
 
+
+# part 2 (ii)
 def emissionEstimateSmoothing(filename, k=3):
     
     for line in open(filename, 'r'):
@@ -89,6 +93,7 @@ def emissionEstimateSmoothing(filename, k=3):
     return e
 
 
+# part 2 (iii)
 def sentimentAnalysis(inputfile, e, outputfile):
     answers= []
     for line in open(inputfile, 'r'):
