@@ -14,7 +14,7 @@ or as an example:
 
     python source/part2.py EN/train EN/dev.in EN/dev.p2.out
 
-The output will be in the output folder. Compare the answers with the evaluation script.
+The output will be in the chosen dataset folder. Compare the answers with the evaluation script.
 
 ### Part 3
 
@@ -28,7 +28,7 @@ or as an example:
 
     python source/part3.py EN/train EN/dev.in EN/dev.p3.out
 
-The output will be in the output folder. Compare the answers with the evaluation script.
+The output will be in the chosen dataset folder. Compare the answers with the evaluation script.
   
   
 ### Part 4
@@ -43,7 +43,7 @@ or as an example:
 
     python source/part4.py EN/train EN/dev.in EN/dev.p4.out
 
-The output will be in the output folder. Compare the answers with the evaluation script.
+The output will be in the chosen dataset folder. Compare the answers with the evaluation script.
       
     
 ### Evaluation Script
