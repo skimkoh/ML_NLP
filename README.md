@@ -26,7 +26,7 @@ To run:
 
 or as an example: 
 
-    python source/part3.py EN/train EN/dev.in EN/dev.p4.out
+    python source/part3.py EN/train EN/dev.in EN/dev.p3.out
 
 The output will be in the output folder. Compare the answers with the evaluation script.
   
