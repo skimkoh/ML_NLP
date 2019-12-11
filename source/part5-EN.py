@@ -10,9 +10,11 @@ x_lst = []    # showing all the words in the document
 x_lst_distinct = []     # remove duplicates words. Is used to extract words that appear > 3
 x_cleaned = []   # store all the words in the training set that is not 'UNK'. Is used to compare with testing set
 
-
 # taken from part 2. used for viterbi algorithm
-def emissionEstimateSmoothing(filename, k=3):
+
+
+# k is changed to 2
+def emissionEstimateSmoothing(filename, k=2):
     
     for line in open(filename, 'r'):
         line = line.rstrip()
@@ -131,6 +133,8 @@ def sentimentAnalysis(inputfile, e, t, outputfile, x_cleaned_dis):
                 for i in range(len(sentence)):
                     if output == None: 
                           continue
+#                         word = sentence[i]
+#                         f.write(f"{word} O\n")
                     else:
                         word = sentence[i]
                         label = output[i]
@@ -155,8 +159,7 @@ def viterbi(sentence, e, t, x_cleaned, y_lst):
     
     if sentence2[0] not in x_cleaned:
         sentence2[0] = '##UNK##'
-    
-    # first word 
+        
     for y in y_lst:
         ttt = 0
         eee = 0
@@ -172,7 +175,7 @@ def viterbi(sentence, e, t, x_cleaned, y_lst):
         if value > pi[0][y][0]:
             pi[0][y] = [value, 'START']
 
-    # recursive
+
     for k in range(1, len(sentence)):
         if sentence2[k] not in x_cleaned:
             sentence2[k] = '##UNK##'
@@ -195,7 +198,6 @@ def viterbi(sentence, e, t, x_cleaned, y_lst):
                 if value > pi[k][v][0]: 
                     pi[k][v] = [value, u]
             
-    # last node
 
     result = [big, '']
     for previous in y_lst:
@@ -209,8 +211,7 @@ def viterbi(sentence, e, t, x_cleaned, y_lst):
 
         if score > result[0]:
             result = [score, previous]
-
-    # backtracking
+    
     pred = [result[1]]
     for j in reversed(range(len(sentence))):
         if j == 0: break
